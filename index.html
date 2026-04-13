@@ -164,7 +164,7 @@
     <div class="thank-you" id="thankYou">
       <div class="ty-circle">🥳</div>
       <h2>Bedankt!</h2>
-      <p>Je RSVP is onderweg naar WhatsApp.<br>Tot ziens op 26 juni bij Villa Oldenhoff!</p>
+      <p>Je RSVP is opgeslagen.<br>Tot ziens op 26 juni bij Villa Oldenhoff!</p>
       <button class="btn-wa" onclick="closeOverlay()">Sluiten</button>
     </div>
   </div>
@@ -188,10 +188,10 @@
   function submitRsvp() {
     var name=document.getElementById('guestName').value.trim();
     var aantal=document.getElementById('aantalPersonen').value.trim();
-    var bbqTxt=rsvp.bbq==='yes'?'✅ Ja, ik ben erbij':'❌ Helaas niet';
-    var partyTxt=rsvp.party==='yes'?'✅ Ja, ik ben erbij':'❌ Helaas niet';
     fetch(SHEET_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({naam:name,aantal:aantal,bbq:rsvp.bbq==='yes'?'Ja':'Nee',feest:rsvp.party==='yes'?'Ja':'Nee'})}).catch(function(){});
-    var msg=' 🌞 RSVP Verstuurd!;
+    document.getElementById('formState').style.display='none';
+    document.getElementById('thankYou').style.display='block';
+    setTimeout(function(){ window.open('https://wa.me/31654242975?text=Verstuurd!','_blank'); },400);
   }
 </script>
 </body>
