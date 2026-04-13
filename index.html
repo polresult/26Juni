@@ -191,10 +191,7 @@
     var bbqTxt=rsvp.bbq==='yes'?'✅ Ja, ik ben erbij':'❌ Helaas niet';
     var partyTxt=rsvp.party==='yes'?'✅ Ja, ik ben erbij':'❌ Helaas niet';
     fetch(SHEET_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({naam:name,aantal:aantal,bbq:rsvp.bbq==='yes'?'Ja':'Nee',feest:rsvp.party==='yes'?'Ja':'Nee'})}).catch(function(){});
-    var msg='🌞 RSVP – Van der Pol Zomer BBQ & Feest\n📅 Vrijdag 26 juni · Villa Oldenhoff\n\n👤 Naam: '+name+'\n👥 Aantal personen: '+aantal+'\n🍖 BBQ (17:00): '+bbqTxt+'\n🎉 Feest (20:00): '+partyTxt;
-    document.getElementById('formState').style.display='none';
-    document.getElementById('thankYou').style.display='block';
-    setTimeout(function(){ window.open('https://wa.me/31654242975?text='+encodeURIComponent(msg),'_blank'); },400);
+    var msg=' 🌞 RSVP Verstuurd!;
   }
 </script>
 </body>
