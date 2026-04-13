@@ -191,7 +191,6 @@
     fetch(SHEET_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({naam:name,aantal:aantal,bbq:rsvp.bbq==='yes'?'Ja':'Nee',feest:rsvp.party==='yes'?'Ja':'Nee'})}).catch(function(){});
     document.getElementById('formState').style.display='none';
     document.getElementById('thankYou').style.display='block';
-    setTimeout(function(){ window.open('https://wa.me/31654242975?text=Verstuurd!','_blank'); },400);
   }
 </script>
 </body>
