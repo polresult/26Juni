@@ -80,6 +80,16 @@
   .tl-title{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:19px;color:var(--cream)}
   .tl-desc{font-size:13px;color:var(--cream);opacity:0.7;margin-top:2px}
 
+  /* Donation block */
+  .donate{padding:1.5rem 1.75rem;text-align:center;position:relative;z-index:1;border-top:1px dashed var(--border);border-bottom:1px dashed var(--border);margin:0 1.75rem}
+  .donate .section-title{justify-content:center}
+  .donate .section-title::after,.donate .section-title::before{content:'';flex:1;height:1px;background:var(--border)}
+  .donate p{font-family:'Playfair Display',serif;font-style:italic;font-size:15px;color:var(--cream);opacity:0.9;line-height:1.55;max-width:340px;margin:0 auto 1.1rem}
+  .donate p strong{color:var(--gold);font-weight:700}
+  .als-link{display:inline-block;text-decoration:none;transition:transform 0.15s,box-shadow 0.15s;border-radius:6px;overflow:hidden;line-height:0}
+  .als-link:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(243,146,0,0.4)}
+  .als-logo-full{width:85px;height:auto;display:block}
+
   /* RSVP CTA */
   .cta{padding:1.5rem 1.75rem 2rem;text-align:center;position:relative;z-index:1}
   .cta-line{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:var(--cream);margin-bottom:1rem;line-height:1.5}
@@ -188,9 +198,16 @@
   </div>
 
   <div class="cta">
-    <p class="cta-line">Kom je?</p>
-    <button class="btn" onclick="openRsvp()">Ja, ik ben erbij</button>
+    <p class="cta-line">Heel leuk als je komt!</p>
+    <button class="btn" onclick="openRsvp()">RSVP</button>
     <div class="countdown" id="countdown"></div>
+  </div>
+
+  <div class="donate">
+    <p>Alsjeblieft geen kado's — maar liever een bijdrage aan <strong>Stichting ALS Nederland</strong>.</p>
+    <a class="als-link" href="https://www.als.nl/doneren/" target="_blank" rel="noopener" aria-label="Doneren aan Stichting ALS Nederland">
+      <img class="als-logo-full" src="logo-als.svg" alt="Stichting ALS Nederland" />
+    </a>
   </div>
 
   <div class="footer">— Mariëtta &amp; Jeroen —</div>
